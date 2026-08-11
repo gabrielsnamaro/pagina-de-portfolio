@@ -1,2 +1,4 @@
-# Página de Portfólio
-Projeto completo de uma página web contendo meu portfólio profissional.
+# Portfólio Profissional
+
+Esse projeto tem como objetivo apresentar o meu portfólio profissional, através de uma página web dinâmica e responsiva.
+
