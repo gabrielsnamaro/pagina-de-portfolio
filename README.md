@@ -2,6 +2,8 @@
 
 Esse projeto tem como objetivo apresentar o meu portfólio profissional, através de uma página web dinâmica e responsiva.
 
+Nome do aluno: Gabriel Silva Neiva Amaro
+
 ### Tecnologias previstas
 #### Front-end:
 - React Native
