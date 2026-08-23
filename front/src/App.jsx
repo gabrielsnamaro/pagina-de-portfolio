@@ -1,7 +1,7 @@
-import ResumePage from './components/ResumePage'
+import ResumePage from "./components/ResumePage";
 
 function App() {
-  return <ResumePage />
+  return <ResumePage />;
 }
 
-export default App
+export default App;
