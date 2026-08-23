@@ -10,6 +10,7 @@ function getPage() {
 
 export default function ResumePage() {
   const [page, setPage] = useState(() => pages[getPage()] ? getPage() : 'home')
+  const [language, setLanguage] = useState('pt')
   const navigate = (nextPage) => {
     window.history.pushState({}, '', nextPage === 'home' ? '/' : `/${nextPage}`)
     setPage(nextPage)
@@ -21,5 +22,5 @@ export default function ResumePage() {
     return () => window.removeEventListener('popstate', onPopState)
   }, [])
   const Page = pages[page]
-  return <main className="min-h-screen bg-[#f7f8fb] text-[#151b2d]"><Navbar page={page} navigate={navigate} /><Page navigate={navigate} /><footer className="border-t border-[#e5e8f0] bg-[#151b2d] px-6 py-6 text-center text-xs text-[#9aa4bc]">© 2026 Gabriel Silva Neiva Amaro</footer></main>
+  return <main className="min-h-screen bg-[#f7f8fb] text-[#151b2d]"><Navbar page={page} language={language} setLanguage={setLanguage} navigate={navigate} /><Page navigate={navigate} language={language} /><footer className="border-t border-[#e5e8f0] bg-[#151b2d] px-6 py-6 text-center text-xs text-[#9aa4bc]">© 2026 Gabriel Silva Neiva Amaro</footer></main>
 }
