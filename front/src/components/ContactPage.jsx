@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Footer, Shell, Arrow } from "./ResumeShared";
 import { getContent, handleContactSubmit, labels } from "./ResumeUtils.jsx";
 
 export default function ContactPage({ language }) {
   const t = labels[language];
   const data = getContent(language);
+  const [mailtoLink, setMailtoLink] = useState("");
   const contactItems = [
     [t.email, data.email, `mailto:${data.email}`],
     [t.phone, data.phone, `tel:${data.phone.replace(/[^\d+]/g, "")}`],
@@ -38,7 +40,7 @@ export default function ContactPage({ language }) {
           </div>
           <form
             className="rounded-xl border border-[#ddd] p-5"
-            onSubmit={(event) => handleContactSubmit(event, language)}
+            onSubmit={(event) => setMailtoLink(handleContactSubmit(event, language))}
           >
             <h2 className="text-base font-bold">{t.message}</h2>
             <label className="mt-5 block text-[10px] font-bold">
@@ -76,6 +78,16 @@ export default function ContactPage({ language }) {
             >
               {t.send} ↗
             </button>
+            {mailtoLink && (
+              <p className="mt-4 text-center text-[10px] text-[#777]">
+                {language === "en"
+                  ? "If your email app did not open, use this link:"
+                  : "Se o cliente de e-mail não abriu, use este link:"}{" "}
+                <a className="font-bold underline" href={mailtoLink}>
+                  {language === "en" ? "Open email" : "Abrir e-mail"}
+                </a>
+              </p>
+            )}
           </form>
         </div>
       </Shell>

@@ -90,12 +90,37 @@ export const getContent = (language) =>
 
 export function handleContactSubmit(event, language) {
   event.preventDefault();
-  const formData = new FormData(event.currentTarget);
+  
+  const form = event.currentTarget;
+  const formData = new FormData(form);
+  const name = formData.get("name") || "";
+  const email = formData.get("email") || "";
+  const message = formData.get("message") || "";
   const data = getContent(language);
-  const subject =
-    language === "en"
-      ? `Contact from ${formData.get("name")}`
-      : `Contato de ${formData.get("name")}`;
-  const body = `${language === "en" ? "Name" : "Nome"}: ${formData.get("name")}\n${language === "en" ? "Email" : "E-mail"}: ${formData.get("email")}\n\n${formData.get("message")}`;
-  window.location.href = `mailto:${data.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+  // Verifica se o email existe
+  if (!data.email) {
+    console.error("Email não encontrado nos dados do currículo");
+    alert("Erro: email de destino não configurado");
+    return;
+  }
+  
+  const subject = language === "en"
+    ? `Contact from ${name}`
+    : `Contato de ${name}`;
+    
+  const labelName = language === "en" ? "Name" : "Nome";
+  const labelEmail = language === "en" ? "Email" : "E-mail";
+  
+  const body = `${labelName}: ${name}\n${labelEmail}: ${email}\n\n${message}`;
+  
+  const mailtoLink = `mailto:${data.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+  console.log("Abrindo mailto:", mailtoLink);
+
+  const mailtoAnchor = document.createElement("a");
+  mailtoAnchor.href = mailtoLink;
+  mailtoAnchor.click();
+
+  return mailtoLink;
 }
