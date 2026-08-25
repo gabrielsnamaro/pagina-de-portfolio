@@ -15,6 +15,9 @@ Nome do aluno: Gabriel Silva Neiva Amaro
 #### Banco de dados:
 - PostgreSQL
 
+#### Integrações externas:
+- EmailJS para API de envio de e-mail
+
 ### Estrutura inicial do site
 
 #### Página inicial

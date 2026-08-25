@@ -69,12 +69,8 @@ export default function Navbar({ page, language, setLanguage, navigate }) {
             {language === "en" ? "Let’s talk" : "Vamos conversar"}
           </a>
         </div>
-    <>
-      <nav className="navbar">
-        <a href="/">Sobre mim</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
       </nav>
+
       <div className="border-t border-[#f0f0f0] px-6 py-2 text-xs text-[#777] md:hidden">
         <span aria-hidden="true">Portfólio</span>
         <span className="mx-2 text-[#bbb]">/</span>
