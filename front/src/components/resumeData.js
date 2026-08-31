@@ -19,6 +19,13 @@ export const resume = {
   projects: [
     { title: 'Simulador de Algoritmos de Escalonamento', description: 'Aplicação em Java que simula o escalonamento de processos na CPU para comparar diferentes políticas de gerenciamento. O projeto acompanha a chegada e a execução dos processos, as filas de prioridade e eventos de E/S, e calcula métricas como tempo médio de espera, turnaround médio e throughput.', tags: ['Java', 'Sistemas Operacionais'], url: 'https://github.com/gabrielsnamaro/Scheduling_Algorithms_Simulator_OS.git' },
     { title: 'Portfólio pessoal web', description: 'Aplicação web dinâmica e responsiva criada para apresentar a trajetória profissional, formação, habilidades, experiências e projetos de Gabriel em uma navegação organizada.', tags: ['React', 'JavaScript', 'Web'], url: 'https://github.com/gabrielsnamaro/pagina-de-portfolio' },
+    { 
+      title: 'Notion Dynamic Manager', 
+      description: 'Seu workspace pessoal para automatizar fluxos de estudo, organizar tarefas e planejar suas revisões ativas (Revisões Espaçadas).', 
+      tags: ['Notion', 'Automations', 'API'], 
+      url: 'https://github.com/gabrielsnamaro/Personal_Academic_Notion_Automations',
+      images: ['/notion1.png', '/notion2.png', '/notion3.png']
+    }
   ],
 }
 
@@ -40,5 +47,12 @@ export const resumeEnglish = {
   projects: [
     { title: 'Scheduling Algorithms Simulator', description: 'Java application that simulates CPU process scheduling to compare different management policies. It tracks process arrivals, execution, priority queues and I/O events, and calculates average waiting time, average turnaround time and throughput.', tags: ['Java', 'Operating Systems'], url: 'https://github.com/gabrielsnamaro/Scheduling_Algorithms_Simulator_OS.git' },
     { title: 'Personal web portfolio', description: 'Dynamic and responsive web application created to present Gabriel\'s professional background, education, skills, experience and projects through an organized navigation.', tags: ['React', 'JavaScript', 'Web'], url: 'https://github.com/gabrielsnamaro/pagina-de-portfolio' },
+    { 
+      title: 'Notion Dynamic Manager', 
+      description: 'Your personal workspace to automate study workflows, organize tasks, and plan your active revisions (Spaced Repetition).', 
+      tags: ['Notion', 'Automations', 'API'], 
+      url: 'https://github.com/gabrielsnamaro/Personal_Academic_Notion_Automations',
+      images: ['/notion1.png', '/notion2.png', '/notion3.png']
+    }
   ],
 }

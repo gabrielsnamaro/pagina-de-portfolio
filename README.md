@@ -1,33 +1,93 @@
-# Portfólio Profissional
+# Portfólio Profissional - Gabriel Silva Neiva Amaro
 
-Esse projeto tem como objetivo apresentar o meu portfólio profissional, através de uma página web dinâmica e responsiva.
+Projeto desenvolvido para a disciplina de **Projeto de Software** (Laboratório 1). 
+Trata-se de um website de portfólio profissional dinâmico, responsivo e bilíngue (Português/Inglês) para apresentar trajetória, habilidades, projetos e formas de contato.
 
-Nome do aluno: Gabriel Silva Neiva Amaro
+🌍 **Link da aplicação hospedada (Vercel):** [https://pagina-de-portfolio-gabriel.vercel.app](<SUA_URL_DA_VERCEL_AQUI>)
 
-### Tecnologias previstas
-#### Front-end:
-- React Native
-- Tailwind
+---
 
-#### Back-end:
-- Spring Boot (Java)
+## 🛠️ Tecnologias e Bibliotecas Utilizadas
 
-#### Banco de dados:
-- PostgreSQL
+**Front-end:**
+- **React.js** (Criado via Vite)
+- **Tailwind CSS v4** (Estilização responsiva e ágil)
+- **EmailJS** (Integração de envio de emails sem necessidade de um backend próprio)
+- **Lucide React** (Pacote de ícones SVG - *caso utilizado*)
 
-#### Integrações externas:
-- EmailJS para API de envio de e-mail
+**Linguagens e Ferramentas:**
+- JavaScript / JSX
+- Node.js & npm
 
-### Estrutura inicial do site
+---
 
-#### Página inicial
+## 📂 Estrutura de Diretórios
+
+```
+lds-lab1/
+├── front/
+│   ├── public/              # Assets estáticos (ex: imagens dos projetos)
+│   ├── src/                 # Código-fonte da aplicação React
+│   │   ├── components/      # Componentes de interface (Páginas, Navbar, Footer)
+│   │   │   ├── resumeData.js      # Dados do currículo (PT/EN) e projetos
+│   │   │   ├── ContactPage.jsx    # Página de Contato e lógica do EmailJS
+│   │   │   ├── ProjectsPage.jsx   # Linha do tempo e carrossel de projetos
+│   │   │   └── ...
+│   │   ├── App.jsx          # Componente raiz
+│   │   └── main.jsx         # Ponto de entrada do React
+│   ├── package.json         # Dependências do projeto
+│   └── vite.config.js       # Configurações do empacotador Vite
+├── img/                     # Prints / Protótipos das telas da aplicação
+└── README.md                # Documentação do projeto
+```
+
+---
+
+## 🚀 Como instalar e executar localmente
+
+Siga os passos abaixo para rodar a aplicação na sua máquina:
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/gabrielsnamaro/pagina-de-portfolio.git
+   cd pagina-de-portfolio/front
+   ```
+
+2. **Instale as dependências:**
+   Certifique-se de ter o [Node.js](https://nodejs.org/) instalado.
+   ```bash
+   npm install
+   ```
+
+3. **Configuração de Variáveis de Ambiente:**
+   Crie um arquivo `.env` na pasta `front/` seguindo o modelo do `.env.example` para que o formulário de contato funcione via EmailJS:
+   ```env
+   VITE_EMAILJS_SERVICE_ID=seu_service_id
+   VITE_EMAILJS_TEMPLATE_ID=seu_template_id
+   VITE_EMAILJS_PUBLIC_KEY=sua_public_key
+   ```
+
+4. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+   Acesse a aplicação no seu navegador: `http://localhost:5173`.
+
+---
+
+## 📸 Capturas de Tela (Protótipos / Aplicação Final)
+
+Abaixo estão as capturas do sistema em funcionamento:
+
+### Página Inicial (Sobre Mim)
 ![Página inicial](./img/paginainicial.png)
 
-#### Página "Meus Projetos"
+### Meus Projetos
+*Com linha do tempo e carrossel de imagens integrados.*
 ![Projetos](./img/projetos.png)
 
-#### Página experiência profissional
+### Experiência Profissional
 ![Experiência](./img/experiencia.png)
 
-#### Página contato
+### Contato
 ![Contato](./img/contatos.png)

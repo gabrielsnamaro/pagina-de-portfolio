@@ -15,9 +15,11 @@ export default function ContactPage({ language }) {
   const [loading, setLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState(null);
 
+  const cleanPhone = data.phone.replace(/[^\d]/g, "");
+  
   const contactItems = [
     [t.email, data.email, `mailto:${data.email}`],
-    [t.phone, data.phone, `tel:${data.phone.replace(/[^\d+]/g, "")}`],
+    ["WhatsApp", data.phone, `https://wa.me/55${cleanPhone}`],
     ["LinkedIn", "linkedin.com/in/gabrielamaro2006", data.linkedin],
   ];
 

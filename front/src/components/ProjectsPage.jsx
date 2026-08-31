@@ -27,7 +27,21 @@ export default function ProjectsPage({ language }) {
               <p className="mt-3 max-w-2xl text-xs leading-relaxed text-[#666]">
                 {project.description}
               </p>
-              <div className="mt-3 flex gap-2">
+              
+              {project.images && project.images.length > 0 && (
+                <div className="mt-5 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2">
+                  {project.images.map((img, i) => (
+                    <img
+                      key={i}
+                      src={img}
+                      alt={`${project.title} screenshot ${i + 1}`}
+                      className="h-48 md:h-64 object-cover border border-[#ddd] snap-start shrink-0 rounded-md shadow-sm"
+                    />
+                  ))}
+                </div>
+              )}
+
+              <div className="mt-4 flex gap-2">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
