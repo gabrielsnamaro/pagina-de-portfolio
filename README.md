@@ -37,7 +37,7 @@ lds-lab1/
 │   │   └── main.jsx         # Ponto de entrada do React
 │   ├── package.json         # Dependências do projeto
 │   └── vite.config.js       # Configurações do empacotador Vite
-├── img/                     # Prints / Protótipos das telas da aplicação
+├── img/                     # Wireframes e protótipos das telas da aplicação
 └── README.md                # Documentação do projeto
 ```
 
@@ -75,15 +75,15 @@ Siga os passos abaixo para rodar a aplicação na sua máquina:
 
 ---
 
-## 📸 Capturas de Tela (Protótipos / Aplicação Final)
+## 🎨 Wireframes e Protótipos
 
-Abaixo estão as capturas do sistema em funcionamento:
+Abaixo estão os wireframes de média fidelidade elaborados durante a etapa de planejamento e design do sistema (Lab01S01):
 
 ### Página Inicial (Sobre Mim)
 ![Página inicial](./img/paginainicial.png)
 
 ### Meus Projetos
-*Com linha do tempo e carrossel de imagens integrados.*
+*Esboço da seção de projetos, incluindo a disposição em linha do tempo.*
 ![Projetos](./img/projetos.png)
 
 ### Experiência Profissional
